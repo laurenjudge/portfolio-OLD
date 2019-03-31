@@ -1,7 +1,7 @@
 .navigation {
     position: absolute;
     top: 0;
-    left: 0;
+    right: 15rem;
     width: 100%;
     z-index: 9999;  
 
@@ -9,7 +9,6 @@
         list-style: none; 
         float: right; 
         margin-top: 5.5rem;
-        margin-right: 18rem; 
     }
 
     &__item {
@@ -26,6 +25,19 @@
         &:link,
         &:visited {
             color: #fff;
+            padding-bottom: 8px;
+            border-bottom: 2px solid transparent;
+            transition: border-bottom 0.2s;
+            -webkit-transition: border-bottom 0.2s;
+            -moz-transition: border-bottom 0.2s;
+            -ms-transition: border-bottom 0.2s;
+            -o-transition: border-bottom 0.2s;
         }
+        
+        &:hover,
+        &:active {
+            border-bottom: 2px solid #df0054;
+        }
+
     }
 }

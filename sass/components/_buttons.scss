@@ -3,7 +3,6 @@
     padding: 10px 30px;
     font-weight: 300;
     text-decoration: none;
-    border-radius: 200px;
     transition: background-color 0.2s, border 0.2s, color 0.2s;
     -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
     -moz-transition: background-color 0.2s, border 0.2s, color 0.2s;
@@ -14,27 +13,33 @@
     &-full {
         &:link,
         &:visited {
-            background-color: #df0054;
-            border: 1px solid #df0054;
+            background-color: $color-primary;
+            border: 1px solid $color-primary;
         }
 
         &:hover,
         &:active {
-            background-color: #9b003a;
-            border-color: #9b003a;
+            background-color: $color-primary-dark;
+            border-color: $color-primary-dark;
         }
     }
 
     &-ghost {
         &:link,
         &:visited {
-            border: 1px solid #df0054;
+            border: 1px solid $color-primary;
         }
 
         &:hover,
         &:active {
-            background-color: #9b003a;
-            border: 1px solid #9b003a;
+            background-color: $color-primary-dark;
+            border: 1px solid $color-primary-dark;
         }
+    }
+
+    &-round {
+        border-radius: 200px;
+        font-size: 2rem;
+        margin: 0 1rem;
     }
 }

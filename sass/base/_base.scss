@@ -13,3 +13,10 @@ html {
 body { 
     box-sizing: border-box; 
 }
+
+.row {
+    max-width: 1140px; 
+    margin: 0 auto; 
+}
+
+section { padding: 7rem 0; }

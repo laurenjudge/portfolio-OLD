@@ -10,14 +10,18 @@
         -ms-transform: translate(-50%, -50%);
         -o-transform: translate(-50%, -50%);
 
-    &-primary {
-        font-weight: 300;
-        font-size: 10rem;
-        color: #fff;
-        border-top: 1px dashed #fff;
-        border-bottom: 1px dashed #fff;
-        margin-bottom: 2rem;
+        &-primary {
+            font-weight: 300;
+            font-size: 10rem;
+            color: #fff;
+            border-top: 1px dashed #fff;
+            border-bottom: 1px dashed #fff;
+            margin-bottom: 2rem;
+        }
     }
 
+    &__buttons {
+        margin-left: 7rem;
+        margin-top: 1rem;
     }
 }
