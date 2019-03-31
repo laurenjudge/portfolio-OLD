@@ -1,0 +1,40 @@
+.btn {
+    display: inline-block;
+    padding: 10px 30px;
+    font-weight: 300;
+    text-decoration: none;
+    border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+    -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    -moz-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    -ms-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    -o-transition: background-color 0.2s, border 0.2s, color 0.2s;
+    color: #fff;
+
+    &-full {
+        &:link,
+        &:visited {
+            background-color: #df0054;
+            border: 1px solid #df0054;
+        }
+
+        &:hover,
+        &:active {
+            background-color: #9b003a;
+            border-color: #9b003a;
+        }
+    }
+
+    &-ghost {
+        &:link,
+        &:visited {
+            border: 1px solid #df0054;
+        }
+
+        &:hover,
+        &:active {
+            background-color: #9b003a;
+            border: 1px solid #9b003a;
+        }
+    }
+}
