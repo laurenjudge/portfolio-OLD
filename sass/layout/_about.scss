@@ -1,3 +1,26 @@
 .section-about {
-    
+    &__paragraph {
+        width: 70%;
+        font-size: 2rem; 
+        margin-left: 15%; 
+        padding-top: 2rem;
+        margin-bottom: 3rem;
+    }
+
+    &__list {
+        text-align: left;
+        font-size: 1.7rem;
+    }
+}
+
+.col:first-child {
+    margin-left: 0;
+}
+
+.hammer::before {
+    transform: rotate(40deg);
+    -webkit-transform: rotate(40deg);
+    -moz-transform: rotate(40deg);
+    -ms-transform: rotate(40deg);
+    -o-transform: rotate(40deg);
 }

@@ -7,6 +7,8 @@ body {
     text-rendering: optimizeLegibility;
 }
 
+//HEADINGS
+
 .heading-secondary {
     font-weight: 300;
     word-spacing: 2px;
@@ -24,5 +26,60 @@ body {
         width: 160px; 
         margin: 0 auto; 
         margin-top: 30px; 
+    }
+}
+
+.heading-tertiary { 
+    text-transform: uppercase; 
+    &:after {
+        display: block; 
+        height: 2px; 
+        background-color: $color-primary-light;
+        content: " "; 
+        width: 2rem; 
+        margin: 1rem 0 1rem 4rem; 
+    }
+}
+
+.heading-tertiary-centered {
+    &:after { 
+        margin: 1rem auto 1rem auto; 
+    }
+}
+
+//TEXT FORMATTING
+
+.center-text { text-align: center; }
+
+.bold-text { font-weight: 400 }
+
+//ICONS
+
+.icon-big {
+    color: $color-primary-light;
+    font-size: 200%; 
+    display: inline-block; 
+}
+
+//UL 
+
+.bulletpoints {
+    list-style-position: inside;
+    padding-left: 1.5rem;
+
+    color: $color-grey-dark; 
+    list-style: none;
+
+    & li::before {
+        color: $color-primary-light;  
+    
+        content: "\2022"; 
+    
+        font-size: 1em; 
+    
+        padding-right: 1.1225em; 
+    
+        position: relative;
+        top: 0em; 
     }
 }

@@ -1,16 +1,13 @@
 .btn {
     display: inline-block;
-    padding: 10px 30px;
-    font-weight: 300;
     text-decoration: none;
     transition: background-color 0.2s, border 0.2s, color 0.2s;
     -webkit-transition: background-color 0.2s, border 0.2s, color 0.2s;
     -moz-transition: background-color 0.2s, border 0.2s, color 0.2s;
     -ms-transition: background-color 0.2s, border 0.2s, color 0.2s;
     -o-transition: background-color 0.2s, border 0.2s, color 0.2s;
-    color: #fff;
 
-    &-full {
+    &--full {
         &:link,
         &:visited {
             background-color: $color-primary;
@@ -24,7 +21,7 @@
         }
     }
 
-    &-ghost {
+    &--ghost {
         &:link,
         &:visited {
             border: 1px solid $color-primary;
@@ -37,9 +34,68 @@
         }
     }
 
-    &-round {
+    &--feature {
         border-radius: 200px;
         font-size: 2rem;
         margin: 0 1rem;
+        padding: 10px 30px;
+        color: $color-white;
+        font-weight: 300;
+    }
+
+    &--small {
+        font-size: 1.8rem;
+        font-weight: 400;
+        border-radius: 4px;
+        margin-right: 2rem;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
+        box-shadow: 
+            0 4px 6px rgba(50,50,93,.11), 
+            0 1px 3px rgba(0,0,0,.08);
+        letter-spacing: .025rem;
+        padding: .4rem .8rem;
+
+        &-full {
+            background-color: $color-primary-light;
+            color: $color-white;
+
+            &:hover,
+            &:active {
+                background-color: $color-primary-light;
+                color: $color-white;
+                transform: translateY(-.3rem);
+                -webkit-transform: translateY(-.3rem);
+                -moz-transform: translateY(-.3rem);
+                -ms-transform: translateY(-.3rem);
+                -o-transform: translateY(-.3rem);
+            }
+            
+            &:link,
+            &:visited { 
+                color: $color-white; 
+            }
+        }
+
+        &-ghost {
+            color: $color-primary-light;
+
+            &:hover,
+            &:active {
+                color: $color-primary-light;
+                transform: translateY(-.3rem);
+                -webkit-transform: translateY(-.3rem);
+                -moz-transform: translateY(-.3rem);
+                -ms-transform: translateY(-.3rem);
+                -o-transform: translateY(-.3rem);
+            }
+            
+            &:link,
+            &:visited { 
+                color: $color-primary-light;
+            }
+        }
     }
 }
