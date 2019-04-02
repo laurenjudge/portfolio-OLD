@@ -65,6 +65,7 @@
             &:hover,
             &:active {
                 background-color: $color-primary-light;
+                opacity: .8;
                 color: $color-white;
                 transform: translateY(-.3rem);
                 -webkit-transform: translateY(-.3rem);
@@ -85,6 +86,7 @@
             &:hover,
             &:active {
                 color: $color-primary-light;
+                opacity: .8;
                 transform: translateY(-.3rem);
                 -webkit-transform: translateY(-.3rem);
                 -moz-transform: translateY(-.3rem);

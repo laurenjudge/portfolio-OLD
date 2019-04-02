@@ -298,6 +298,7 @@ body {
       color: #fff; }
       .btn--small-full:hover, .btn--small-full:active {
         background-color: #ff136c;
+        opacity: .8;
         color: #fff;
         transform: translateY(-0.3rem);
         -webkit-transform: translateY(-0.3rem);
@@ -310,6 +311,7 @@ body {
       color: #ff136c; }
       .btn--small-ghost:hover, .btn--small-ghost:active {
         color: #ff136c;
+        opacity: .8;
         transform: translateY(-0.3rem);
         -webkit-transform: translateY(-0.3rem);
         -moz-transform: translateY(-0.3rem);
@@ -339,6 +341,22 @@ body {
   -ms-transform: rotate(40deg);
   -o-transform: rotate(40deg); }
 
+.contact__links {
+  margin: 15rem 0 20rem 0; }
+  .contact__links span {
+    padding: 0 3rem; }
+  .contact__links a {
+    margin: 0 3rem;
+    text-decoration: none;
+    color: #555;
+    padding-bottom: 1rem; }
+    .contact__links a:link, .contact__links a:visited {
+      color: #555; }
+    .contact__links a:hover, .contact__links a:active {
+      color: #555;
+      border-bottom: 2px solid #ff136c;
+      padding-bottom: 1rem; }
+
 .header__title {
   position: absolute;
   z-index: 9999;
@@ -360,6 +378,10 @@ body {
 .header__buttons {
   margin-left: 7rem;
   margin-top: 1rem; }
+
+.footer p {
+  margin-bottom: 5rem;
+  font-size: 1.7rem; }
 
 .navigation {
   position: absolute;
