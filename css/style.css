@@ -252,8 +252,7 @@ body {
     overflow: hidden; }
   .bg-video__content {
     object-fit: cover;
-    z-index: -1;
-    overflow: hidden; }
+    z-index: -1; }
 
 .btn {
   display: inline-block;
@@ -380,39 +379,64 @@ body {
   margin-top: 1rem; }
 
 .footer p {
-  margin-bottom: 5rem;
+  padding-bottom: 5rem;
   font-size: 1.7rem; }
 
+/*-----------------------------------------------*/
+/* common properties */
+/*-----------------------------------------------*/
 .navigation {
-  position: absolute;
   top: 0;
-  right: 15rem;
   width: 100%;
-  z-index: 9999; }
-  .navigation__list {
+  z-index: 99999; }
+  .navigation .__ul {
     list-style: none;
-    float: right;
-    margin-top: 5.5rem; }
-  .navigation__item {
+    float: right; }
+  .navigation .__item {
     font-weight: 300;
-    height: 5.5rem;
     float: left;
-    padding: 0 2rem;
     text-transform: uppercase;
     font-size: 1.7rem; }
-  .navigation__link {
+  .navigation .__link {
     text-decoration: none; }
-    .navigation__link:link, .navigation__link:visited {
-      color: #fff;
-      padding-bottom: 8px;
+    .navigation .__link:link, .navigation .__link:visited {
       border-bottom: 2px solid transparent;
       transition: border-bottom 0.2s;
       -webkit-transition: border-bottom 0.2s;
       -moz-transition: border-bottom 0.2s;
       -ms-transition: border-bottom 0.2s;
       -o-transition: border-bottom 0.2s; }
-    .navigation__link:hover, .navigation__link:active {
-      border-bottom: 2px solid #df0054; }
+    .navigation .__link:hover, .navigation .__link:active {
+      border-bottom: 2px solid #df0054;
+      padding-bottom: .8rem; }
+
+/*-----------------------------------------------*/
+/* Main Nav */
+/*-----------------------------------------------*/
+.navigation-main {
+  position: absolute; }
+  .navigation-main .__item {
+    padding: 5.5rem 2rem; }
+  .navigation-main .__link:link, .navigation-main .__link:visited {
+    padding-bottom: .8rem;
+    color: #fff; }
+
+/*-----------------------------------------------*/
+/* Sticky Nav */
+/*-----------------------------------------------*/
+.sticky {
+  position: fixed;
+  background-color: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 2px 2px #efefef;
+  font-size: 2rem; }
+  .sticky .__ul {
+    display: inline-block; }
+  .sticky .__item {
+    padding: 1rem 2rem; }
+  .sticky .__link {
+    text-decoration: none; }
+    .sticky .__link:link, .sticky .__link:visited {
+      color: #555; }
 
 .projects__card {
   margin-top: 5rem;
