@@ -1,3 +1,16 @@
+/* 
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait 
+900 - 1200px:   Tablet landscape
+[1200 - 1800] is where normal styles apply
+1800px +:       Big desktop
+
+$breakpoint argument choices: 
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
 *,
 *::after,
 *::before {
@@ -189,6 +202,10 @@ body {
   letter-spacing: 1px;
   font-size: 5rem;
   color: #4d4d4d; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-secondary {
+      letter-spacing: 1rem;
+      font-size: 5rem; } }
   .heading-secondary:after {
     display: block;
     height: 2px;
