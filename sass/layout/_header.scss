@@ -17,6 +17,14 @@
             border-top: 1px dashed #fff;
             border-bottom: 1px dashed #fff;
             margin-bottom: 2rem;
+
+            @include respond(phone) {
+                font-size: 5rem; 
+            }
+
+            @include respond(tab-land) {
+                font-size: 7.5rem; 
+            }
         }
     }
 
@@ -30,5 +38,7 @@
     & p {
         padding-bottom: 5rem;
         font-size: 1.7rem;
+
+        @include respond(tab-land) { font-size: 1.4rem; }
     }
 }

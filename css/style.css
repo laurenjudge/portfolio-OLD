@@ -193,6 +193,9 @@ body {
   font-size: 2rem;
   color: #555;
   text-rendering: optimizeLegibility; }
+  @media only screen and (max-width: 75em) {
+    body {
+      font-size: 1.7rem; } }
 
 .heading-secondary {
   font-weight: 300;
@@ -202,10 +205,9 @@ body {
   letter-spacing: 1px;
   font-size: 5rem;
   color: #4d4d4d; }
-  @media only screen and (max-width: 37.5em) {
+  @media only screen and (max-width: 75em) {
     .heading-secondary {
-      letter-spacing: 1rem;
-      font-size: 5rem; } }
+      font-size: 4.5rem; } }
   .heading-secondary:after {
     display: block;
     height: 2px;
@@ -217,6 +219,9 @@ body {
 
 .heading-tertiary {
   text-transform: uppercase; }
+  @media only screen and (max-width: 75em) {
+    .heading-tertiary {
+      font-size: 2.2rem; } }
   .heading-tertiary:after {
     display: block;
     height: 2px;
@@ -252,13 +257,13 @@ body {
     position: relative;
     top: 0em; }
 
-.bg-video {
+.bg {
   top: 0;
   left: 0;
   overflow: hidden;
   height: 100vh;
   width: 100%; }
-  .bg-video__overlay {
+  .bg__overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -267,9 +272,39 @@ body {
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 2;
     overflow: hidden; }
-  .bg-video__content {
+  .bg__video {
+    overflow: hidden;
     object-fit: cover;
-    z-index: -1; }
+    z-index: -1;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%); }
+    @media only screen and (max-width: 75em) {
+      .bg__video {
+        display: none; } }
+  .bg__image {
+    display: none; }
+    @media only screen and (max-width: 75em) {
+      .bg__image {
+        display: block;
+        object-fit: cover;
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%); } }
 
 .btn {
   display: inline-block;
@@ -342,6 +377,9 @@ body {
   margin-left: 15%;
   padding-top: 2rem;
   margin-bottom: 3rem; }
+  @media only screen and (max-width: 75em) {
+    .section-about__paragraph {
+      font-size: 1.8rem; } }
 
 .section-about__list {
   text-align: left;
@@ -390,6 +428,12 @@ body {
     border-top: 1px dashed #fff;
     border-bottom: 1px dashed #fff;
     margin-bottom: 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .header__title-primary {
+        font-size: 5rem; } }
+    @media only screen and (max-width: 75em) {
+      .header__title-primary {
+        font-size: 7.5rem; } }
 
 .header__buttons {
   margin-left: 7rem;
@@ -398,6 +442,9 @@ body {
 .footer p {
   padding-bottom: 5rem;
   font-size: 1.7rem; }
+  @media only screen and (max-width: 75em) {
+    .footer p {
+      font-size: 1.4rem; } }
 
 /*-----------------------------------------------*/
 /* common properties */
@@ -472,9 +519,21 @@ body {
 
 .projects__content {
   padding: 1rem 4rem; }
+  @media only screen and (max-width: 56.25em) {
+    .projects__content {
+      padding: .7rem 3.5rem; } }
+  @media only screen and (max-width: 75em) {
+    .projects__content--text {
+      font-size: 1.8rem; } }
   .projects__content--skills {
     padding: 2rem 0;
     font-size: 1.7rem; }
+    @media only screen and (max-width: 75em) {
+      .projects__content--skills {
+        font-size: 1.6rem; } }
+    @media only screen and (max-width: 56.25em) {
+      .projects__content--skills {
+        padding: 1.5rem 0; } }
     .projects__content--skills-skill {
       border: 2px solid #9499f9;
       padding: .5rem;
@@ -485,6 +544,16 @@ body {
       -moz-border-radius: 4px;
       -ms-border-radius: 4px;
       -o-border-radius: 4px; }
+      @media only screen and (max-width: 56.25em) {
+        .projects__content--skills-skill {
+          font-size: 1.5rem;
+          padding: .3rem;
+          margin-right: .5rem;
+          margin-bottom: .7rem; } }
   .projects__content--buttons {
     margin-bottom: 1.5rem;
     margin-top: 1rem; }
+    @media only screen and (max-width: 56.25em) {
+      .projects__content--buttons {
+        margin-bottom: 1rem;
+        margin-top: .5rem; } }

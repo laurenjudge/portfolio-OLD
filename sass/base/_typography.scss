@@ -5,6 +5,8 @@ body {
     font-size: $default-font-size;
     color: $color-grey-dark;
     text-rendering: optimizeLegibility;
+
+    @include respond(tab-land) { font-size: 1.7rem; }
 }
 
 //HEADINGS
@@ -18,10 +20,7 @@ body {
     font-size: 5rem;
     color: $color-grey-dark-2;
 
-    @include respond(phone) {
-        letter-spacing: 1rem;
-        font-size: 5rem; 
-    }
+    @include respond(tab-land) { font-size: 4.5rem; }
 
     &:after {
         display: block; 
@@ -36,6 +35,9 @@ body {
 
 .heading-tertiary { 
     text-transform: uppercase; 
+
+    @include respond(tab-land) { font-size: 2.2rem; }
+
     &:after {
         display: block; 
         height: 2px; 

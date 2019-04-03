@@ -26,11 +26,21 @@
 
     &__content {    
         padding: 1rem 4rem;
+
+        @include respond(tab-port) { padding: .7rem 3.5rem; }        
+
+        &--text {
+            @include respond(tab-land) { font-size: 1.8rem; }
+        }
         
         &--skills {
             padding: 2rem 0;
             font-size: 1.7rem;
 
+            @include respond(tab-land) { font-size: 1.6rem; }
+
+            @include respond(tab-port) { padding: 1.5rem 0; }
+            
             &-skill {
                 border: 2px solid $color-secondary-light;
                 padding: .5rem;
@@ -41,12 +51,24 @@
                 -moz-border-radius: 4px;
                 -ms-border-radius: 4px;
                 -o-border-radius: 4px;
+
+                @include respond(tab-port) { 
+                    font-size: 1.5rem; 
+                    padding: .3rem;
+                    margin-right: .5rem;
+                    margin-bottom: .7rem;
+                }
             }
         }
 
         &--buttons { 
             margin-bottom: 1.5rem; 
             margin-top: 1rem;
+
+            @include respond(tab-port) { 
+                margin-bottom: 1rem; 
+                margin-top: .5rem;
+            }
         }
     }
 
