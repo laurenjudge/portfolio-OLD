@@ -1,12 +1,13 @@
 .section-about {
     &__paragraph {
-        width: 70%;
+        width: 80%;
         font-size: 2rem; 
-        margin-left: 15%; 
         padding-top: 2rem;
         margin-bottom: 3rem;
 
         @include respond(tab-land) { font-size: 1.8rem; }
+
+        & :last-child { padding-top: 1.5rem; }
     }
 
     &__list {

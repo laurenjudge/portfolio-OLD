@@ -42,7 +42,12 @@
         color: $color-white;
         font-weight: 300;
 
-        @include respond(tab-port-small) { padding: .8rem 2.8rem }
+        @include respond(tab-land-small) { padding: .8rem 2.8rem }
+
+        @include respond(tab-port-2) { 
+            margin: 0 2rem 0 0; 
+            padding: .5rem 2.3rem !important;
+        }
     }
 
     &--small {
@@ -60,7 +65,7 @@
         letter-spacing: .025rem;
         padding: .4rem .8rem;
 
-        @include respond(tab-port) { font-size: 1.7rem; }
+        @include respond(tab-land-small) { font-size: 1.6rem; }
 
         &-full {
             background-color: $color-primary-light;

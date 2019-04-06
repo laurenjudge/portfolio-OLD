@@ -22,12 +22,20 @@ $breakpoint argument choices:
         @media only screen and (max-width: 37.5em) { @content }; //600px
     }
 
+    @if $breakpoint == tab-port-small {
+        @media only screen and (max-width: 45em) { @content }; //720px
+    }
+
+    @if $breakpoint == tab-port-2 {
+        @media only screen and (max-width: 49.5em) { @content }; //792px
+    }
+    
     @if $breakpoint == tab-port {
         @media only screen and (max-width: 53.75em) { @content }; //860px
     }
    
     @if $breakpoint == tab-land-small {
-        @media only screen and (max-width: 56.25em) { @content }; //900px
+        @media only screen and (max-width: 57.5em) { @content }; //920px
     }
     
     @if $breakpoint == tab-land {

@@ -1,3 +1,9 @@
+h1 {
+    font-size: 10rem;
+
+    @include respond(tab-land) { font-size: 8rem ; }
+}
+
 .header {
     &__title {
         position: absolute;
@@ -10,25 +16,29 @@
         -ms-transform: translate(-50%, -50%);
         -o-transform: translate(-50%, -50%);
 
+        @include respond(tab-port-small) { 
+            width: 100%; 
+            text-align: center;
+        }
+
         &-primary {
             font-weight: 300;
-            font-size: 10rem;
             color: #fff;
             border-top: 1px dashed #fff;
             border-bottom: 1px dashed #fff;
             margin-bottom: 2rem;
 
-            @include respond(tab-port-small) { font-size: 6.5rem !important; }
+            @include respond(tab-land-small) { font-size: 6.5rem ; }
 
-            @include respond(tab-land) { font-size: 7.5rem; }
-            
-            @include respond(phone) { font-size: 5rem; }
+            @include respond(tab-port-2) { font-size: 6rem !important; }
         }
     }
 
     &__buttons {
         margin-left: 7rem;
         margin-top: 1rem;
+
+        @include respond(tab-port-2) { margin-left: 0; }
     }
 }
 
