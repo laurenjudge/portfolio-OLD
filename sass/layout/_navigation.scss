@@ -105,11 +105,11 @@
 
     & .__ul {  
         display: inline-block; 
-        @include respond(phone) { margin-top: 10px; }
+        @include respond(phone) { margin-top: 1rem; }
     }
 
     & .mobile-nav-icon {
-        @include respond(phone) { margin-top: 10px; }
+        @include respond(phone) { margin-top: 1rem; }
 
         & i {
             @include respond(phone) { color: $color-grey-dark; }
