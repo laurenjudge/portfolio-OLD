@@ -481,11 +481,29 @@ h1 {
   .navigation .__ul {
     list-style: none;
     float: right; }
+    @media only screen and (max-width: 37.5em) {
+      .navigation .__ul {
+        display: none;
+        float: left;
+        margin-top: 3.5rem;
+        margin-left: 2.5rem;
+        position: relative;
+        left: 50%;
+        transform: translateY(-50%, -50%);
+        -webkit-transform: translateY(-50%, -50%);
+        -moz-transform: translateY(-50%, -50%);
+        -ms-transform: translateY(-50%, -50%);
+        -o-transform: translateY(-50%, -50%); } }
   .navigation .__item {
     font-weight: 300;
     float: left;
     text-transform: uppercase;
     font-size: 1.7rem; }
+    @media only screen and (max-width: 37.5em) {
+      .navigation .__item {
+        display: block;
+        float: none;
+        padding: 0; } }
   .navigation .__link {
     text-decoration: none; }
     .navigation .__link:link, .navigation .__link:visited {
@@ -495,9 +513,18 @@ h1 {
       -moz-transition: border-bottom 0.2s;
       -ms-transition: border-bottom 0.2s;
       -o-transition: border-bottom 0.2s; }
+      @media only screen and (max-width: 37.5em) {
+        .navigation .__link:link, .navigation .__link:visited {
+          display: block;
+          border: 0;
+          padding: 10px 0;
+          font-size: 100%; } }
     .navigation .__link:hover, .navigation .__link:active {
       border-bottom: 2px solid #df0054;
       padding-bottom: .8rem; }
+      @media only screen and (max-width: 37.5em) {
+        .navigation .__link:hover, .navigation .__link:active {
+          border: none; } }
 
 /*-----------------------------------------------*/
 /* Main Nav */
@@ -506,6 +533,9 @@ h1 {
   position: absolute; }
   .navigation-main .__item {
     padding: 5.5rem 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .navigation-main .__item {
+        padding: 0; } }
   .navigation-main .__link:link, .navigation-main .__link:visited {
     padding-bottom: .8rem;
     color: #fff; }
@@ -520,12 +550,42 @@ h1 {
   font-size: 2rem; }
   .sticky .__ul {
     display: inline-block; }
+    @media only screen and (max-width: 37.5em) {
+      .sticky .__ul {
+        margin-top: 10px; } }
+  @media only screen and (max-width: 37.5em) {
+    .sticky .mobile-nav-icon {
+      margin-top: 10px; } }
+  @media only screen and (max-width: 37.5em) {
+    .sticky .mobile-nav-icon i {
+      color: #555; } }
   .sticky .__item {
     padding: 1rem 2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .sticky .__item {
+        font-size: 1.6rem;
+        padding: 0; } }
   .sticky .__link {
     text-decoration: none; }
     .sticky .__link:link, .sticky .__link:visited {
       color: #555; }
+
+/*-----------------------------------------------*/
+/* Mobile Nav */
+/*-----------------------------------------------*/
+.mobile-nav-icon {
+  float: right;
+  margin-top: 3rem;
+  margin-right: 3rem;
+  cursor: pointer;
+  display: none; }
+  @media only screen and (max-width: 37.5em) {
+    .mobile-nav-icon {
+      display: inline-block; } }
+
+.mobile-nav-icon i {
+  font-size: 200%;
+  color: #fff; }
 
 .projects__card {
   margin-top: 5rem;
