@@ -18,6 +18,10 @@ $breakpoint argument choices:
         @media only screen and (max-width: 18.75em) { @content }; //300px
     }
 
+    @if $breakpoint == phone-2 {
+        @media only screen and (max-width: 24.375em) { @content }; //390px
+    }
+
     @if $breakpoint == phone {
         @media only screen and (max-width: 37.5em) { @content }; //600px
     }

@@ -15,9 +15,28 @@
         font-size: 1.7rem;
     }
 
+    &__col {
+        margin: 1% 0 1% 1.6%;
+        display: block;
+        float:left;
+
+        &:first-child {margin-left: 0;}
+
+        @include respond(tab-land) { 
+            margin: 0;
+            @include respond(tab-port-2) { 
+                margin: 0 0 4% 0; 
+            } 
+        } 
+    }
+
     &__rightcol {
         @include respond(tab-port-2) { 
             margin-left: 10rem; 
+
+            @include respond(phone-2) { 
+                margin-left: 6.5rem; 
+            }
         } 
     }
 }

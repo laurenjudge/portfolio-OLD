@@ -97,5 +97,13 @@ body {
 .center-div {
     @include respond(tab-port-2) {
         margin: 0 auto;
+        max-width: 280px;
+    }
+
+    &--last {
+        @include respond(tab-port-2) {
+            margin: 0 auto;
+            max-width: 400px;
+        }
     }
 }

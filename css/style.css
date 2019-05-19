@@ -265,7 +265,13 @@ body {
 
 @media only screen and (max-width: 49.5em) {
   .center-div {
-    margin: 0 auto; } }
+    margin: 0 auto;
+    max-width: 280px; } }
+
+@media only screen and (max-width: 49.5em) {
+  .center-div--last {
+    margin: 0 auto;
+    max-width: 400px; } }
 
 .bg {
   top: 0;
@@ -406,9 +412,25 @@ body {
   text-align: left;
   font-size: 1.7rem; }
 
+.section-about__col {
+  margin: 1% 0 1% 1.6%;
+  display: block;
+  float: left; }
+  .section-about__col:first-child {
+    margin-left: 0; }
+  @media only screen and (max-width: 75em) {
+    .section-about__col {
+      margin: 0; } }
+  @media only screen and (max-width: 75em) and (max-width: 49.5em) {
+    .section-about__col {
+      margin: 0 0 4% 0; } }
+
 @media only screen and (max-width: 49.5em) {
   .section-about__rightcol {
     margin-left: 10rem; } }
+  @media only screen and (max-width: 49.5em) and (max-width: 24.375em) {
+    .section-about__rightcol {
+      margin-left: 6.5rem; } }
 
 .col:first-child {
   margin-left: 0; }
