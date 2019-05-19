@@ -74,17 +74,28 @@ body {
     list-style-position: inside;
     color: $color-grey-dark; 
     list-style: none;
+    margin-left: 6.5rem;
+
+    @include respond(tab-port-2) {  
+        max-width: 450px;
+        
+        @include respond(phone) {
+            max-width: 300px;
+        }
+    }
 
     & li::before {
-        color: $color-primary-light;  
-    
-        content: "\2022"; 
-    
-        font-size: 1em; 
-    
-        padding-right: 1.1225em; 
-    
-        position: relative;
-        top: 0em; 
+        content: "\2022";
+        color: $color-primary-light;
+        display: inline-block; 
+        width: 1em;
+        margin-left: -1em;
+        padding-right: 1.1225em;
+    }
+}
+
+.center-div {
+    @include respond(tab-port-2) {
+        margin: 0 auto;
     }
 }
