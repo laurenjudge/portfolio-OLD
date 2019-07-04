@@ -6,9 +6,9 @@ body {
     color: $color-grey-dark;
     text-rendering: optimizeLegibility;
 
-    @include respond(tab-land) { font-size: 1.7rem; }
+    @include respond(tab-land) { font-size: 1.8rem; }
 
-    @include respond(tab-land-small) { padding: 1.5rem 0; }
+    @include respond(tab-land-small) { padding: 1.8rem 0; }
 }
 
 //HEADINGS
@@ -51,14 +51,24 @@ body {
 .heading-tertiary-centered {
     &:after { 
         margin: 1rem auto 1rem auto; 
+
+        @include respond(tab-land) { margin: 1rem 0 1rem 4rem; }
     }
 }
 
 //TEXT FORMATTING
 
-.center-text { text-align: center; }
+.center-text { 
+    text-align: center; 
 
-.bold-text { font-weight: 400 }
+    @include respond(tab-land) { text-align: left; }
+}
+
+.bold-text { font-weight: 400; }
+
+.large-text { font-size: 2.2rem; }
+
+.margin-small { margin-bottom: 3rem; }
 
 //ICONS
 
@@ -71,27 +81,21 @@ body {
 //UL 
 
 .bulletpoints {
-    list-style-position: inside;
-    color: $color-grey-dark; 
-    list-style: none;
-    margin-left: 6.5rem;
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: $color-primary-light;
+}
 
-    @include respond(tab-port-2) {  
-        max-width: 450px;
-        
-        @include respond(phone) {
-            max-width: 300px;
-        }
-    }
+.listitem-container {
+    display: flex;
+    align-items: baseline;
+}
 
-    & li::before {
-        content: "\2022";
-        color: $color-primary-light;
-        display: inline-block; 
-        width: 1em;
-        margin-left: -1em;
-        padding-right: 1.1225em;
-    }
+.listitem {
+    display: inline-block;
+    margin-left: 1rem;
 }
 
 .center-div {

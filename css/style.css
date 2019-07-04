@@ -86,19 +86,17 @@ section {
 
 .span-2-of-3 {
   width: 66.13%; }
+  @media only screen and (max-width: 57.5em) {
+    .span-2-of-3 {
+      width: 100%; } }
 
 .span-1-of-3 {
   width: 32.26%; }
+  @media only screen and (max-width: 57.5em) {
+    .span-1-of-3 {
+      width: 100%; } }
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
-@media only screen and (max-width: 792px) {
-  .span-3-of-3 {
-    width: 100%; }
-  .span-2-of-3 {
-    width: 100%; }
-  .span-1-of-3 {
-    width: 100%; } }
-
 /*  GRID OF FOUR   ============================================================================= */
 .span-4-of-4 {
   width: 100%; }
@@ -195,10 +193,10 @@ body {
   text-rendering: optimizeLegibility; }
   @media only screen and (max-width: 75em) {
     body {
-      font-size: 1.7rem; } }
+      font-size: 1.8rem; } }
   @media only screen and (max-width: 57.5em) {
     body {
-      padding: 1.5rem 0; } }
+      padding: 1.8rem 0; } }
 
 .heading-secondary {
   font-weight: 300;
@@ -232,12 +230,24 @@ body {
 
 .heading-tertiary-centered:after {
   margin: 1rem auto 1rem auto; }
+  @media only screen and (max-width: 75em) {
+    .heading-tertiary-centered:after {
+      margin: 1rem 0 1rem 4rem; } }
 
 .center-text {
   text-align: center; }
+  @media only screen and (max-width: 75em) {
+    .center-text {
+      text-align: left; } }
 
 .bold-text {
   font-weight: 400; }
+
+.large-text {
+  font-size: 2.2rem; }
+
+.margin-small {
+  margin-bottom: 3rem; }
 
 .icon-big {
   color: #ff136c;
@@ -245,23 +255,19 @@ body {
   display: inline-block; }
 
 .bulletpoints {
-  list-style-position: inside;
-  color: #555;
-  list-style: none;
-  margin-left: 6.5rem; }
-  @media only screen and (max-width: 49.5em) {
-    .bulletpoints {
-      max-width: 450px; } }
-  @media only screen and (max-width: 49.5em) and (max-width: 37.5em) {
-    .bulletpoints {
-      max-width: 300px; } }
-  .bulletpoints li::before {
-    content: "\2022";
-    color: #ff136c;
-    display: inline-block;
-    width: 1em;
-    margin-left: -1em;
-    padding-right: 1.1225em; }
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #ff136c; }
+
+.listitem-container {
+  display: flex;
+  align-items: baseline; }
+
+.listitem {
+  display: inline-block;
+  margin-left: 1rem; }
 
 @media only screen and (max-width: 49.5em) {
   .center-div {
@@ -397,40 +403,46 @@ body {
       .btn--small-ghost:link, .btn--small-ghost:visited {
         color: #ff136c; }
 
-.section-about__paragraph {
-  width: 80%;
-  font-size: 2rem;
-  padding-top: 2rem;
-  margin-bottom: 3rem; }
+.section-about {
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 10rem; }
   @media only screen and (max-width: 75em) {
-    .section-about__paragraph {
-      font-size: 1.8rem; } }
-  .section-about__paragraph :last-child {
-    padding-top: 1.5rem; }
-
-.section-about__list {
-  text-align: left;
-  font-size: 1.7rem; }
-
-.section-about__col {
-  margin: 1% 0 1% 1.6%;
-  display: block;
-  float: left; }
-  .section-about__col:first-child {
-    margin-left: 0; }
-  @media only screen and (max-width: 75em) {
-    .section-about__col {
-      margin: 0; } }
-  @media only screen and (max-width: 75em) and (max-width: 49.5em) {
-    .section-about__col {
-      margin: 0 0 4% 0; } }
-
-@media only screen and (max-width: 49.5em) {
-  .section-about__rightcol {
-    margin-left: 10rem; } }
-  @media only screen and (max-width: 49.5em) and (max-width: 24.375em) {
-    .section-about__rightcol {
-      margin-left: 6.5rem; } }
+    .section-about {
+      margin-right: 5%;
+      margin-left: 5%; } }
+  .section-about__info {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10rem;
+    margin-top: 5rem; }
+    .section-about__info--paragraph {
+      margin-top: 1rem;
+      margin-bottom: 3rem; }
+      .section-about__info--paragraph :last-child {
+        margin-top: 2rem; }
+  .section-about__skills {
+    display: flex;
+    justify-content: space-between; }
+    @media only screen and (max-width: 75em) {
+      .section-about__skills {
+        width: 100%;
+        flex-direction: column; } }
+    .section-about__skills--heading i {
+      margin-left: 3rem; }
+    .section-about__skills--ul {
+      margin-top: 2rem; }
+    .section-about__skills--two-cols {
+      -webkit-columns: 2;
+      -moz-columns: 2;
+      columns: 2;
+      padding-left: 0;
+      margin-top: 2rem; }
+      @media only screen and (max-width: 75em) {
+        .section-about__skills--two-cols {
+          -webkit-columns: 1;
+          -moz-columns: 1;
+          columns: 1; } }
 
 .col:first-child {
   margin-left: 0; }
@@ -650,9 +662,11 @@ h1 {
     .projects__content {
       padding: 1rem 2.5rem;
       margin: 0; } }
-  @media only screen and (max-width: 75em) {
-    .projects__content--text {
-      font-size: 1.8rem; } }
+  .projects__content--text {
+    margin-top: 1rem; }
+    @media only screen and (max-width: 75em) {
+      .projects__content--text {
+        font-size: 1.8rem; } }
   .projects__content--skills {
     padding: 2rem 0;
     font-size: 1.7rem; }

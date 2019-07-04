@@ -1,43 +1,53 @@
 .section-about {
-    &__paragraph {
-        width: 80%;
-        font-size: 2rem; 
-        padding-top: 2rem;
-        margin-bottom: 3rem;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10rem;
 
-        @include respond(tab-land) { font-size: 1.8rem; }
-
-        & :last-child { padding-top: 1.5rem; }
+    @include respond(tab-land) { 
+        margin-right: 5%;
+        margin-left: 5%; 
     }
 
-    &__list {
-        text-align: left;
-        font-size: 1.7rem;
+    &__info {
+        display: flex; 
+        flex-direction: column;
+        margin-bottom: 10rem;
+        margin-top: 5rem;
+
+        &--paragraph {
+            margin-top: 1rem;
+            margin-bottom: 3rem;
+        
+            & :last-child { margin-top: 2rem; }
+        }
     }
 
-    &__col {
-        margin: 1% 0 1% 1.6%;
-        display: block;
-        float:left;
-
-        &:first-child {margin-left: 0;}
+    &__skills {
+        display: flex;
+        justify-content: space-between;
 
         @include respond(tab-land) { 
-            margin: 0;
-            @include respond(tab-port-2) { 
-                margin: 0 0 4% 0; 
-            } 
-        } 
-    }
+            width: 100%;
+            flex-direction: column;
+        }
 
-    &__rightcol {
-        @include respond(tab-port-2) { 
-            margin-left: 10rem; 
+        &--heading i { margin-left: 3rem; }
 
-            @include respond(phone-2) { 
-                margin-left: 6.5rem; 
+        &--ul { margin-top: 2rem; }
+
+        &--two-cols {
+            -webkit-columns: 2;
+                -moz-columns: 2;
+                    columns: 2;
+            padding-left: 0;
+            margin-top: 2rem;
+
+            @include respond(tab-land) { 
+                -webkit-columns: 1;
+                    -moz-columns: 1;
+                        columns: 1;
             }
-        } 
+        }
     }
 }
 

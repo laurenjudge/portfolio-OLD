@@ -10,7 +10,7 @@
 
 .row {
     zoom: 1; /* For IE 6/7 (trigger hasLayout) */
-}
+} 
 
 .row:before,
 .row:after {
@@ -74,26 +74,19 @@
 
 .span-2-of-3 {
 	width: 66.13%; 
+
+	@include respond(tab-land-small) { width: 100%; }
 }
 
 .span-1-of-3 {
 	width: 32.26%; 
+
+	@include respond(tab-land-small) { width: 100%; }
 }
 
 
 /*  GO FULL WIDTH AT LESS THAN 480 PIXELS */
 
-@media only screen and (max-width: 792px) {
-	.span-3-of-3 {
-		width: 100%; 
-	}
-	.span-2-of-3 {
-		width: 100%; 
-	}
-	.span-1-of-3 {
-		width: 100%;
-	}
-}
 
 /*  GRID OF FOUR   ============================================================================= */
 

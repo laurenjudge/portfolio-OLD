@@ -35,6 +35,7 @@
         }        
 
         &--text {
+            margin-top: 1rem;
             @include respond(tab-land) { font-size: 1.8rem; }
         }
         
