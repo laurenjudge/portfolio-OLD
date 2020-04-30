@@ -255,6 +255,7 @@ body {
   display: inline-block; }
 
 .bulletpoints {
+  flex-shrink: 0;
   width: 0.5rem;
   height: 0.5rem;
   border-radius: 50%;
@@ -428,21 +429,30 @@ body {
       .section-about__skills {
         width: 100%;
         flex-direction: column; } }
-    .section-about__skills--heading i {
-      margin-left: 3rem; }
+      .section-about__skills--heading {
+        margin-bottom: 2rem; }
+    .section-about__skills--cols {
+      flex-basis: 33%; }
     .section-about__skills--ul {
       margin-top: 2rem; }
     .section-about__skills--two-cols {
-      -webkit-columns: 2;
-      -moz-columns: 2;
-      columns: 2;
-      padding-left: 0;
-      margin-top: 2rem; }
+      margin-top: 2rem;
+      display: flex;
+      margin-left: 3rem; }
+      @media only screen and (max-width: 75em) {
+        .section-about__skills--heading i {
+          margin-left: 3rem;}
+      }
       @media only screen and (max-width: 75em) {
         .section-about__skills--two-cols {
-          -webkit-columns: 1;
-          -moz-columns: 1;
-          columns: 1; } }
+          flex-direction: column;
+          margin-left: 0; } }
+    .section-about__skills--two-cols-row {
+      width: 50%;
+    }
+    @media only screen and (max-width: 75em) {
+      .section-about__skills--two-cols-row {
+        width: unset; } }
 
 .col:first-child {
   margin-left: 0; }
